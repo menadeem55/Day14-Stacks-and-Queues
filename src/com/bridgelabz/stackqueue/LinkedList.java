@@ -30,12 +30,15 @@ public class LinkedList {
 	 */
 	public void addLast(Object data) {
 		Node newNode = new Node(data);
-		Node temp = head;
+		// when LinkedList is empty
 		if (head == null)
 			head = newNode;
+		// when LinkedList has only one node
 		else if (head.ref == null)
 			head.ref = newNode;
 		else {
+			// when LinkedList has more than 2 nodes
+			Node temp = head;
 			while (temp.ref != null) {
 				temp = temp.ref;
 			}
